@@ -115,5 +115,6 @@
     <string name="uri_im">IM with custom SIP scheme</string>
     <string name="uri_sip">Internet call</string>
     <string name="create_account">Create New Account</string>
+    <string name="email_activate">We will send a message to your email with all details of your new account. Yet, you need to verify this account clicking on the link provided within that same message.</string>
 
 </resources>

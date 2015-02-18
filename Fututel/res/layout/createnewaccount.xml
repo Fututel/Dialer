@@ -62,6 +62,16 @@
                 android:layout_marginBottom="15dp"
                 android:layout_above="@+id/email"
                 android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/email_activate"
+                android:id="@+id/textView2"
+                android:layout_marginBottom="18dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true" />
         </RelativeLayout>
     </LinearLayout>
     <TextView android:textColor="@android:color/black" android:textColorLink="#153cff" android:autoLink="web" android:linksClickable="true" android:id="@+id/demourl" android:layout_width="wrap_content" android:layout_height="wrap_content"

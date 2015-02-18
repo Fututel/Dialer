@@ -92,7 +92,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
                 params.put("hash", hash);
 
 
-                client.post("http://sip2.fututel.com/billing/api/user_register", params, handler);
+                client.post("http://sip.fututel.com/billing/api/user_register", params, handler);
 
                 progDialog = ProgressDialog.show(
                         Createnewaccount.this,
@@ -204,7 +204,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
 
 
     private  SipProfile buildAccount(SipProfile account) {
-        String domain =  "sip2.fututel.com";
+        String domain =  "sip.fututel.com";
         account.display_name = "Fututel";
 
         account.acc_id = "<sip:" + SipUri.encodeUser(uname) + "@" + domain +">";

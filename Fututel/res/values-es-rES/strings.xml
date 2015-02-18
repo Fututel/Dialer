@@ -96,4 +96,5 @@
   <string name="uri_im">Mensajería Instantánea (IM) con un esquema SIP personalizado</string>
   <string name="uri_sip">Llamada por Internet</string>
    <string name="create_account">Crear Nueva Cuenta</string>
+    <string name="email_activate">Enviamos un mensaje a tu email con todos los detalles de tu nueva cuenta. Aún necesitas verificar esta cuenta dando click en el link provisto en el mismo mensaje.</string>
 </resources>

@@ -284,7 +284,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
         AsyncHttpClient client = new AsyncHttpClient();
         client.setTimeout(4000);
 
-        client.get("http://sip2.fututel.com/billing/api/user_balance_get_by_username?id=" + account.username + "&currency=USER" , handler);
+        client.get("http://sip.fututel.com/billing/api/user_balance_get_by_username?id=" + account.username + "&currency=USER" , handler);
     }
 
     private void handler_progress()
