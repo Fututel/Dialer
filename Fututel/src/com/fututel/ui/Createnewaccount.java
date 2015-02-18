@@ -26,6 +26,7 @@ import com.fututel.db.DBProvider;
 import com.fututel.utils.PreferencesWrapper;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.util.Log;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -43,7 +44,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
     private Button submiteaccount;
     private AsyncHttpResponseHandler handler = null;
     private String loginid = "f739f7060d";
-    private String apisecuretkey = "JTqQpnMs4C(J56g#";
+    private String apisecuretkey = "J&TqQpnMs4CJ56g";
     private String hash = "";
     private String uname = "";
     private String passwd = "";
@@ -77,6 +78,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
                 try {
                     hash = SHA1(email.getText().toString()+loginid+apisecuretkey);
                 } catch (NoSuchAlgorithmException e) {
+
                     e.printStackTrace();
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
@@ -88,7 +90,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
                 RequestParams params = new RequestParams();
                 params.put("id", "f739f7060d");
                 params.put("email", email.getText().toString());
-                params.put("API_Secret_Key", "b1ea4735aeec8809ee6d659b80f6a77003bcd311");
+                params.put("API_Secret_Key", "J&TqQpnMs4CJ56g");
                 params.put("hash", hash);
 
 
@@ -125,7 +127,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
                     LoginFunction();
                 else
                 {
-                    if(data.contains("This email address is already in use"))
+                    if(data.contains("Esta dirección de email está ya en uso"))
                     {
                         new AlertDialog.Builder(Createnewaccount.this)
                                 .setTitle("This email address is already in use.")
@@ -137,7 +139,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
 
                                 .setIcon(android.R.drawable.ic_dialog_alert)
                                 .show();
-
+                        return;
                     }
                 }
             }
