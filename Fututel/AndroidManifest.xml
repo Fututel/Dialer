@@ -3,7 +3,7 @@
     package="com.fututel"
     android:installLocation="auto"
     android:versionCode="2225"
-    android:versionName="1.01.00" >
+    android:versionName="2.00.00" >
 
     <supports-screens
         android:anyDensity="true"
