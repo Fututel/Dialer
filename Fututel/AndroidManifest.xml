@@ -575,6 +575,9 @@
         <activity
             android:name="com.fututel.wizards.impl.MondotalkCreate"
             android:theme="@style/DarkTheme" />
+
+<!-- Help -->
+		<activity android:name="com.fututel.ui.help.HelpActivity" android:theme="@style/DarkTheme" android:configChanges="orientation"/>
     </application>
 
 </manifest>

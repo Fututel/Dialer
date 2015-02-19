@@ -23,6 +23,7 @@ package com.fututel.ui.favorites;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,11 +35,18 @@ import com.fututel.ui.account.AccountsEditList;
 import android.widget.RelativeLayout;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.fututel.R;
+import com.fututel.ui.help.Help;
+import com.fututel.ui.help.HelpActivity;
 import com.fututel.utils.PreferencesWrapper;
+
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.MenuInflater;
 
 public class FavListFragment extends SherlockFragment implements ViewPagerVisibilityListener {
 
-    private RelativeLayout account, setting, logout;
+    private RelativeLayout account, setting, help, logout;
     private SipHome siphome = null;
 
 
@@ -66,6 +74,15 @@ public class FavListFragment extends SherlockFragment implements ViewPagerVisibi
             @Override
             public void onClick(View v) {
                 startActivityForResult(new Intent(SipManager.ACTION_UI_PREFS_GLOBAL), 1);
+            }
+        });
+
+        help = (RelativeLayout) v.findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(siphome, HelpActivity.class));
             }
         });
 

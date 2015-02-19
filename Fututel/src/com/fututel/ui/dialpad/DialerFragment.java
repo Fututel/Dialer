@@ -192,7 +192,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
         callBar = (DialerCallBar) v.findViewById(R.id.dialerCallBar);
         username = (TextView) v.findViewById(R.id.username);
         status_img = (ImageView) v.findViewById(R.id.status_img);
-        balance = (TextView) v.findViewById(R.id.balance);
+        //balance = (TextView) v.findViewById(R.id.balance);
         extension = (TextView) v.findViewById(R.id.extension);
 
         autoCompleteList = (ListView) v.findViewById(R.id.autoCompleteList);
@@ -257,7 +257,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
         }
         SipProfile account = SipProfile.getProfileFromDbId(getActivity(), 1, DBProvider.ACCOUNT_FULL_PROJECTION);
         if (account.username != null) {
-            extension.setText("Extension : " + account.username);//rangdong
+            extension.setText("Ext : " + account.username);
             RunBackGround(account);
         }
         SharedPreferences.Editor edit = prefs.edit();
@@ -284,7 +284,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
         AsyncHttpClient client = new AsyncHttpClient();
         client.setTimeout(4000);
 
-        client.get("http://sip.fututel.com/billing/api/user_balance_get_by_username?id=" + account.username + "&currency=USER" , handler);
+        //client.get("http://sip.fututel.com/billing/api/user_balance_get_by_username?id=" + account.username + "&currency=USER" , handler);
     }
 
     private void handler_progress()
@@ -294,7 +294,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
             @Override
             public void onSuccess(String result) {
 
-                balance.setText("Balance : "  + result.trim());
+               // balance.setText("Balance : "  + result.trim());
             }
 
             @Override

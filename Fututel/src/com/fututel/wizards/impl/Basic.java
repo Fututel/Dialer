@@ -26,7 +26,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.preference.EditTextPreference;
-
+import android.view.View;
 import android.preference.PreferenceScreen;
 import com.HttpConn.AsyncHttpClient;
 import com.HttpConn.AsyncHttpResponseHandler;
@@ -106,7 +106,7 @@ public class Basic extends BaseImplementation {
 			@Override
 			public void onSuccess(String result) {
 
-				credit.setText(result.trim());
+				//credit.setText(result.trim());
 			}
 
 			@Override

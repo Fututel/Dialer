@@ -24,7 +24,7 @@
                       android:textStyle="bold"
                       android:textColor="@color/white"
                       android:layout_width="fill_parent"
-                      android:hint="Email"
+                      android:hint="Your Email"
                       android:background="@drawable/sltr_wht_edtx"
                       android:layout_height="wrap_content"
                       android:padding="@dimen/login_btn_padding"
@@ -33,7 +33,9 @@
                       android:singleLine="true"
                 android:layout_above="@+id/submiteaccount"
                 android:layout_alignParentLeft="true"
-                android:layout_marginBottom="25dp">
+                android:layout_marginBottom="25dp"
+                android:autoText="false"
+                android:inputType="textEmailAddress">
                 <requestFocus />
             </EditText>
             <Button android:textSize="@dimen/login_btn_text"

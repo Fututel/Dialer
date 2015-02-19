@@ -73,6 +73,30 @@ public class Createnewaccount extends SherlockFragmentActivity  {
                             .show();
                     return;
                 }
+                if (!email.getText().toString().contains("@")) {
+                    new AlertDialog.Builder(Createnewaccount.this)
+                            .setTitle("Your email is missing an '@' symbol!")
+                            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // continue with delete
+                                }
+                            })
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .show();
+                    return;
+                }
+                if (!email.getText().toString().contains(".")) {
+                    new AlertDialog.Builder(Createnewaccount.this)
+                            .setTitle("Your email is missing a '.' symbol!")
+                            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // continue with delete
+                                }
+                            })
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .show();
+                    return;
+                }
                 handler_progress();
 
                 try {

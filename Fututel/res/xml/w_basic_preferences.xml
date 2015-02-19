@@ -52,13 +52,14 @@
         <!--android:summary="@string/w_common_server_desc"-->
         <!--android:title="@string/w_common_server" />-->
 
-    <EditTextPreference
+    <!--<EditTextPreference
             android:dialogMessage="status"
             android:inputType="textVisiblePassword"
             android:key="status"
             android:singleLine="true"
             android:summary="Unregistered"
-            android:title="Status" />
+            android:title="Status"
+            android:visibility="invisible"/>
 
     <EditTextPreference
             android:dialogMessage="extension"
@@ -66,7 +67,8 @@
             android:key="extension"
             android:singleLine="true"
             android:summary=""
-            android:title="Extension" />
+            android:title="Extension"
+            android:visibility="invisible"/>
 
     <EditTextPreference
             android:dialogMessage="credit"
@@ -74,6 +76,7 @@
             android:key="credit"
             android:singleLine="true"
             android:summary=""
-            android:title="Credit" />
+            android:title="Credit"
+            android:visibility="invisible"/>-->
 
 </PreferenceScreen>
