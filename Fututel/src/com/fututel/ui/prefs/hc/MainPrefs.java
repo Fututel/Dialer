@@ -48,11 +48,11 @@ public class MainPrefs extends SherlockPreferenceActivity {
         loadHeadersFromResource(R.xml.prefs_headers, target);
         for(Header header : target) {
             // Well not the cleanest way to do that...
-            if(header.iconRes == R.drawable.ic_prefs_fast) {
-                header.intent = new Intent(SipManager.ACTION_UI_PREFS_FAST);
-            }else if(header.iconRes == R.drawable.ic_prefs_filter) {
-                header.intent = new Intent(this, PrefsFilters.class);
-            }
+            //if(header.iconRes == R.drawable.ic_prefs_fast) {
+                //header.intent = new Intent(SipManager.ACTION_UI_PREFS_FAST);
+            //}else if(header.iconRes == R.drawable.ic_prefs_filter) {
+                //header.intent = new Intent(this, PrefsFilters.class);
+            //}
         }
         mFragments = target;
     }

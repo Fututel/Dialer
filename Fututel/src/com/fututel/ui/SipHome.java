@@ -534,12 +534,12 @@ public class SipHome extends SherlockFragmentActivity implements OnWarningChange
     private void postStartSipService() {
         // If we have never set fast settings
         if (CustomDistribution.showFirstSettingScreen()) {
-            if (!prefProviderWrapper.getPreferenceBooleanValue(PreferencesWrapper.HAS_ALREADY_SETUP, false)) {
-                Intent prefsIntent = new Intent(SipManager.ACTION_UI_PREFS_FAST);
-                prefsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(prefsIntent);
-                return;
-            }
+            //if (!prefProviderWrapper.getPreferenceBooleanValue(PreferencesWrapper.HAS_ALREADY_SETUP, false)) {
+                //Intent prefsIntent = new Intent(SipManager.ACTION_UI_PREFS_FAST);
+                //prefsIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                //startActivity(prefsIntent);
+                //return;
+            //}
         } else {
             boolean doFirstParams = !prefProviderWrapper.getPreferenceBooleanValue(PreferencesWrapper.HAS_ALREADY_SETUP, false);
             prefProviderWrapper.setPreferenceBooleanValue(PreferencesWrapper.HAS_ALREADY_SETUP, true);

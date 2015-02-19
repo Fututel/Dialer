@@ -577,7 +577,8 @@
             android:theme="@style/DarkTheme" />
 
 <!-- Help -->
-		<activity android:name="com.fututel.ui.help.HelpActivity" android:theme="@style/DarkTheme" android:configChanges="orientation"/>
+		<activity android:name=".ui.help.AboutActivity" android:theme="@style/DarkTheme" android:configChanges="orientation"/>
+<activity android:name=".ui.help.HelpActivity" android:theme="@style/DarkTheme" android:configChanges="orientation"/>
     </application>
 
 </manifest>

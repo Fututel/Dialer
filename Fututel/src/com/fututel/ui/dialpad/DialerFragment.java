@@ -152,10 +152,10 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
 
     private DialerLayout dialerLayout;
 
-	@Override
-	public void onAutoCompleteListVisibiltyChanged() {
+    @Override
+    public void onAutoCompleteListVisibiltyChanged() {
         applyTextToAutoComplete();
-	}
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -181,7 +181,6 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
         // Store the backgrounds objects that will be in use later
         /*
         Resources r = getResources();
-
         digitsBackground = r.getDrawable(R.drawable.btn_dial_textfield_active);
         digitsEmptyBackground = r.getDrawable(R.drawable.btn_dial_textfield_normal);
         */
@@ -192,7 +191,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
         callBar = (DialerCallBar) v.findViewById(R.id.dialerCallBar);
         username = (TextView) v.findViewById(R.id.username);
         status_img = (ImageView) v.findViewById(R.id.status_img);
-        //balance = (TextView) v.findViewById(R.id.balance);
+        balance = (TextView) v.findViewById(R.id.balance);
         extension = (TextView) v.findViewById(R.id.extension);
 
         autoCompleteList = (ListView) v.findViewById(R.id.autoCompleteList);
@@ -257,7 +256,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
         }
         SipProfile account = SipProfile.getProfileFromDbId(getActivity(), 1, DBProvider.ACCOUNT_FULL_PROJECTION);
         if (account.username != null) {
-            extension.setText("Ext : " + account.username);
+            extension.setText("Ext : " + account.username);//rangdong
             RunBackGround(account);
         }
         SharedPreferences.Editor edit = prefs.edit();
@@ -284,7 +283,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
         AsyncHttpClient client = new AsyncHttpClient();
         client.setTimeout(4000);
 
-        //client.get("http://sip.fututel.com/billing/api/user_balance_get_by_username?id=" + account.username + "&currency=USER" , handler);
+        client.get("http://sip.fututel.com/billing/api/user_balance_get_by_username?id=" + account.username + "&currency=USER" , handler);
     }
 
     private void handler_progress()
@@ -294,7 +293,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
             @Override
             public void onSuccess(String result) {
 
-               // balance.setText("Balance : "  + result.trim());
+                balance.setText("Cred : "  + result.trim());
             }
 
             @Override
@@ -349,7 +348,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                balance.setText("Balance : "  + result);
+                balance.setText("Cred : "  + result);
             }
 
             @Override
@@ -613,7 +612,7 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
         // If single pane for smartphone use autocomplete list
         if (hasAutocompleteList()) {
             //if (digits.length() >= 2) {
-                autoCompleteAdapter.getFilter().filter(digits.getText().toString());
+            autoCompleteAdapter.getFilter().filter(digits.getText().toString());
             //} else {
             //    autoCompleteAdapter.swapCursor(null);
             //}
@@ -832,8 +831,8 @@ public class DialerFragment extends SherlockFragment implements OnClickListener,
 
                                             int updated = getActivity().getContentResolver()
                                                     .update(ContentUris.withAppendedId(
-                                                            SipProfile.ACCOUNT_ID_URI_BASE,
-                                                            editedAccId),
+                                                                    SipProfile.ACCOUNT_ID_URI_BASE,
+                                                                    editedAccId),
                                                             cv, null, null);
                                             Log.d(THIS_FILE, "Updated accounts " + updated);
                                         }

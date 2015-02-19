@@ -66,8 +66,8 @@ public class MainPrefs extends SherlockListActivity {
 		prefsWrapper = new PreferencesWrapper(this);
 		
 		List<PrefGroup> prefs_list = new ArrayList<PrefGroup>();
-		prefs_list.add(new PrefGroup(R.string.prefs_fast, R.string.prefs_fast_desc,
-				R.drawable.ic_prefs_fast, new Intent(SipManager.ACTION_UI_PREFS_FAST)));
+		//prefs_list.add(new PrefGroup(R.string.prefs_fast, R.string.prefs_fast_desc,
+				//R.drawable.ic_prefs_fast, new Intent(SipManager.ACTION_UI_PREFS_FAST)));
 		prefs_list.add(new PrefGroup(R.string.prefs_network, R.string.prefs_network_desc,
 				R.drawable.ic_prefs_network, getIntentForType(PrefsLogic.TYPE_NETWORK)));
 		prefs_list.add(new PrefGroup(R.string.prefs_media, R.string.prefs_media_desc,

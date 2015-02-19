@@ -22,8 +22,8 @@
 package com.fututel.ui.favorites;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,18 +35,13 @@ import com.fututel.ui.account.AccountsEditList;
 import android.widget.RelativeLayout;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.fututel.R;
-import com.fututel.ui.help.Help;
+import com.fututel.ui.help.AboutActivity;
 import com.fututel.ui.help.HelpActivity;
 import com.fututel.utils.PreferencesWrapper;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.actionbarsherlock.view.MenuInflater;
-
 public class FavListFragment extends SherlockFragment implements ViewPagerVisibilityListener {
 
-    private RelativeLayout account, setting, help, logout;
+    private RelativeLayout account, setting, about, help, logout;
     private SipHome siphome = null;
 
 
@@ -77,12 +72,23 @@ public class FavListFragment extends SherlockFragment implements ViewPagerVisibi
             }
         });
 
-        help = (RelativeLayout) v.findViewById(R.id.help);
-        help.setOnClickListener(new View.OnClickListener() {
+        about = (RelativeLayout) v.findViewById(R.id.about);
+        about.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(siphome, HelpActivity.class));
+                startActivity(new Intent(siphome, AboutActivity.class));
+            }
+        });
+
+        help = (RelativeLayout) v.findViewById(R.id.help);
+       help.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                //startActivity(new Intent(siphome, HelpActivity.class));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://fututel.com/es/soporte/ayuda-usuarios-supervoz"));
+                startActivity(browserIntent);
             }
         });
 

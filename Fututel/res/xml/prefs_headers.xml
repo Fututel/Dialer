@@ -17,11 +17,11 @@
 -->
 <preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <header
+    <!--<header
         android:icon="@drawable/ic_prefs_fast"
-        android:summary="@string/prefs_fast_desc"
+       android:summary="@string/prefs_fast_desc"
         android:title="@string/prefs_fast" >
-    </header>
+    </header>-->
     <header
         android:fragment="com.fututel.ui.prefs.hc.PrefsLoaderFragment"
         android:icon="@drawable/ic_prefs_network"

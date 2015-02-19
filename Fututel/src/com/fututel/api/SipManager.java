@@ -136,7 +136,7 @@ public final class SipManager {
     /**
      * Action launched to enter fast settings.<br/>
      */
-    public static final String ACTION_UI_PREFS_FAST = "com.fututel.ui.action.PREFS_FAST";
+    //public static final String ACTION_UI_PREFS_FAST = "com.fututel.ui.action.PREFS_FAST";
     /**
      * Action launched to enter global csipsimple settings.<br/>
      */

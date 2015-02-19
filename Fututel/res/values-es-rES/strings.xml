@@ -96,5 +96,18 @@
   <string name="uri_im">Mensajería Instantánea (IM) con un esquema SIP personalizado</string>
   <string name="uri_sip">Llamada por Internet</string>
    <string name="create_account">Crear Nueva Cuenta</string>
-    <string name="email_activate">Enviaremos un mensaje a este email con todos los detalles de su nueva cuenta y un link que debes abrir para verificar esta cuenta</string>
+    <string name="email_activate">Enviaremos un mensaje a este email con todos los detalles de su nueva cuenta y un link que debes abrir para verificar esta cuenta y poder usar tu saldo de prueba.</string>
+    <string name="settings_account">Cuenta</string>
+    <string name="settings_settings">Ajustes</string>
+    <string name="settings_help">Ayuda</string>
+    <string name="settings_about">Acerca</string>
+    <string name="settings_quit">Desconectar</string>
+    <string name="create_new_account">Crear Nueva Cuenta</string>
+    <string name="already_have_account">Ya Tengo Cuenta</string>
+    <string name="missingsymbol_at"> Su email no tiene un símbolo @!</string>
+    <string name="missingsymbol_dot">Su email no tiene un símbolo .!</string>
+    <string name="input_email">Por favor entre su email</string>
+    <string name="email_in_use">Este email ya está en uso</string>
+    <string name="registered">Registrado</string>
+    <string name="mainscreen_note">Todas las llamadas a otros usuarios Fututel son gratis. Además, esta app te permite llamar a cualquier fijo y celular en Colombia y el mundo a las mejores tarifas del mercado.</string>
 </resources>

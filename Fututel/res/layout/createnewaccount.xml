@@ -42,7 +42,7 @@
                       android:textColor="@color/white"
                       android:id="@+id/submiteaccount"
                       android:textStyle="bold"
-                      android:text="Create a Fututel Account"
+                      android:text="@string/create_new_account"
                       android:background="@drawable/btn_dialvoip_action"
                       android:typeface="serif"
                       android:layout_width="fill_parent"
@@ -71,7 +71,6 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="@string/email_activate"
                 android:id="@+id/textView2"
-                android:layout_marginBottom="18dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true" />
         </RelativeLayout>

@@ -68,15 +68,27 @@
                 android:layout_weight="4">
 
             <TextView
-                    android:layout_height="match_parent"
-                    android:layout_width="fill_parent"
-                    android:id="@+id/extension"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:id="@+id/balance"
+                android:layout_weight="5"
                 android:textColor="@android:color/white"
-                    android:textSize="19dp"
-                    android:text="Ext : "
-                    android:textStyle="bold"
-                    android:paddingRight="5dp"
-                android:paddingTop="15dp" />
+                android:textSize="19dp"
+                android:text="Cred : 0"
+                android:textStyle="bold"
+                android:paddingRight="5dp"/>
+            <TextView
+                android:layout_height="0dp"
+                android:layout_width="fill_parent"
+                android:id="@+id/extension"
+                android:layout_weight="5"
+                android:textColor="@android:color/white"
+                android:textSize="19dp"
+                android:text="Ext : "
+                android:textStyle="bold"
+                android:paddingRight="5dp"/>
+
+
         </LinearLayout>
 
     </LinearLayout>
@@ -138,17 +150,16 @@
 
         <ImageButton
             android:state_enabled="false"
-            android:layout_gravity="center"
             android:id="@+id/deleteButton"
             android:background="@drawable/btn_dial_right_corner"
-            android:layout_width="80.0dip"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
             android:src="@drawable/ic_dial_action_delete"
             android:layout_alignParentTop="true"
             android:contentDescription="@string/description_delete_button"
             android:layout_marginRight="5dp"
             android:layout_alignParentRight="true"
-            />
+            android:paddingTop="20dp" />
 
     </RelativeLayout>
     <!-- Autocomplete -->

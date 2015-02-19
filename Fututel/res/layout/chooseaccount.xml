@@ -33,7 +33,7 @@
                       android:textColor="@color/white"
                       android:layout_width="fill_parent"
                       android:typeface="serif"
-                      android:text="Create a New Account"
+                      android:text="@string/create_new_account"
                       android:background="@drawable/btn_dialvoip_action"
                       android:layout_height="wrap_content"
                       android:padding="@dimen/login_btn_padding"
@@ -48,7 +48,7 @@
                       android:textColor="@color/white"
                       android:id="@+id/haveaccount"
                       android:textStyle="bold"
-                      android:text="I already Have an Account"
+                      android:text="@string/already_have_account"
                       android:background="@drawable/btn_dialvoip_action"
                       android:typeface="serif"
                       android:layout_width="fill_parent"
@@ -60,9 +60,21 @@
                       android:layout_below="@id/createnewaccount"
                       android:layout_alignRight="@id/createnewaccount"
                       android:layout_marginTop="20dip"/>
-</RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/mainscreen_note"
+                android:id="@+id/textView9"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
     </LinearLayout>
     <TextView android:textColor="@android:color/black" android:textColorLink="#153cff" android:autoLink="web" android:linksClickable="true" android:id="@+id/demourl" android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
         android:visibility="invisible"/>
+
 </RelativeLayout>

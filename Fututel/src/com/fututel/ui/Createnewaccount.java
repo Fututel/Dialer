@@ -63,7 +63,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
 
                 if (email.getText().length() == 0) {
                     new AlertDialog.Builder(Createnewaccount.this)
-                            .setTitle("Please input email.")
+                            .setTitle(getString(R.string.input_email))
                             .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     // continue with delete
@@ -75,7 +75,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
                 }
                 if (!email.getText().toString().contains("@")) {
                     new AlertDialog.Builder(Createnewaccount.this)
-                            .setTitle("Your email is missing an '@' symbol!")
+                            .setTitle(getString(R.string.missingsymbol_at))
                             .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     // continue with delete
@@ -87,7 +87,7 @@ public class Createnewaccount extends SherlockFragmentActivity  {
                 }
                 if (!email.getText().toString().contains(".")) {
                     new AlertDialog.Builder(Createnewaccount.this)
-                            .setTitle("Your email is missing a '.' symbol!")
+                            .setTitle(getString(R.string.missingsymbol_dot))
                             .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     // continue with delete
@@ -151,10 +151,10 @@ public class Createnewaccount extends SherlockFragmentActivity  {
                     LoginFunction();
                 else
                 {
-                    if(data.contains("Esta dirección de email está ya en uso"))
+                    if(data.contains("Esta dirección de email está ya en uso") || data.contains(" This email address is already in use"))
                     {
                         new AlertDialog.Builder(Createnewaccount.this)
-                                .setTitle("This email address is already in use.")
+                                .setTitle(getString(R.string.email_in_use))
                                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         // continue with delete

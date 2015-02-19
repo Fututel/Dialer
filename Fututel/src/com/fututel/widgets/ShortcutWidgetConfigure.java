@@ -67,7 +67,7 @@ public class ShortcutWidgetConfigure extends SherlockListActivity {
 	    new Shortcut(R.string.calllog_tab_name_text, R.drawable.ic_ab_history_holo_dark, new Intent(SipManager.ACTION_SIP_CALLLOG)),
 	    new Shortcut(R.string.favorites_tab_name_text, R.drawable.ic_ab_favourites_holo_dark, new Intent(SipManager.ACTION_SIP_FAVORITES)),
         new Shortcut(R.string.messages_tab_name_text, R.drawable.ic_ab_text_holo_dark, new Intent(SipManager.ACTION_SIP_MESSAGES)),
-        new Shortcut(R.string.prefs_fast, R.drawable.ic_prefs_fast, new Intent(SipManager.ACTION_UI_PREFS_FAST)),
+        //new Shortcut(R.string.prefs_fast, R.drawable.ic_prefs_fast, new Intent(SipManager.ACTION_UI_PREFS_FAST)),
         new Shortcut(R.string.prefs, android.R.drawable.ic_menu_manage, new Intent(SipManager.ACTION_UI_PREFS_GLOBAL)),
         new Shortcut(R.string.messages_tab_name_text, R.drawable.ic_ab_text_holo_dark, new Intent(SipManager.ACTION_SIP_CHAT)),
 	};
